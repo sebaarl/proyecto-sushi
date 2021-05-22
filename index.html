@@ -13,15 +13,15 @@
     <script>
         $(document).ready(function() {
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 480) {
+                if ($(this).scrollTop() > 150) {
                     $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
                     $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#d00008', 'transition', '.5s')
+                    $('.header__sesion').css('background-color', '#d00008')
                     $('.header__sesion').css( 'transition', '.7s')
                 } else {
-                    $('header').css('background-color', 'transparent' , 'transition', '.5s')
+                    $('header').css('background-color', 'transparent')
                     $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#101010', 'transition', '.9s')
+                    $('.header__sesion').css('background-color', '#101010')
                     $('.header__sesion').css( 'transition', '.7s')
                }
             })
@@ -34,8 +34,8 @@
     </a>
     <header id="header">
         <div class="header__sesion">
-            <a href="./login.html">Iniciar sesión</a>
-            <a href="./register.html">Registrate</a>
+            <a href="./secundary/login.html">Iniciar sesión</a>
+            <a href="./secundary/register.html">Registrate</a>
         </div>
         <nav class="header__nav">
             <div class="nav__logo">
@@ -45,9 +45,9 @@
                 <img src="./img/icons/logo2-web-1024x373 v2.png" alt="">
                 <ul class="nav__list">
                     <li class="nav__items"><a href="./index.html" class="nav__links active-link">Inicio</a></li>
-                    <li class="nav__items"><a href="./about.html" class="nav__links">Quiénes Somos</a></li>
-                    <li class="nav__items"><a href="./menu.html" class="nav__links">Menú</a></li>
-                    <li class="nav__items"><a href="./contact.html" class="nav__links">Contacto</a></li>
+                    <li class="nav__items"><a href="./secundary/about.html" class="nav__links">Quiénes Somos</a></li>
+                    <li class="nav__items"><a href="./secundary/menu.html" class="nav__links">Menú</a></li>
+                    <li class="nav__items"><a href="./secundary/contact.html" class="nav__links">Contacto</a></li>
                 </ul>
                 <div class="menu__social">
                     <i class='bx bxl-instagram'></i>
@@ -73,7 +73,7 @@
                         <div class="home__body--content">
                             <p></p>
                         </div>
-                        <a class="home__body--button" href="./menu.html">Pide Aquí!</a>
+                        <a class="home__body--button" href="./secundary/menu.html">Pide Aquí!</a>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                     <h4>Información de Contacto</h4>
                 </div>
                 <div class="footer__row--body">
-                    <p class='bx bx-home-alt'> San Martin 622, Concepción, Chile</p><br>
+                    <p class='bx bxs-map'> San Martin 622, Concepción, Chile</p><br>
                     <p class='bx bxs-phone'> +56 9 1234 5678</p>
                 </div>
             </div>

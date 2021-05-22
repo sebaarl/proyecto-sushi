@@ -35,7 +35,7 @@ function scrollTop() {
 
 window.addEventListener('scroll', scrollTop)
 
-// MIXITUP FILTER PORTAFOLIO
+// MIXITUP Filtro product
 const mixer = mixitup('.product__container', {
   selectors: {
       target: '.product__content'
@@ -45,7 +45,7 @@ const mixer = mixitup('.product__container', {
   }
 });
 
-// LINK ACTIVATE PORTAFOLIO
+// LINK active-product
 const linkProduct = document.querySelectorAll('.product__item')
 
 function activeProduct() {

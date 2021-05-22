@@ -119,7 +119,7 @@ header {
   
 .nav__links:hover {
     padding: 5px 10px;
-    background-color: var(--second-color);
+    background-color: var(--second-color-alt);
     border-radius: 20px;
     color: var(--white-color);
     transition: .6s;
@@ -240,6 +240,8 @@ header {
 }
 
 .home__body--button {
+    color: var(--white-color);
+    font-size: 1.6rem;
     width: 200px;
     height: 50px;
     border-radius: 50px;
@@ -253,11 +255,7 @@ header {
     background-color: var(--white-color);
     color: var(--dark-color);
     transition: .5s ease-in-out;
-}
-
-.home__body--button {
-    color: var(--white-color);
-    font-size: 2.0rem;
+    font-weight: bold;
 }
 
 .featured__product {
@@ -341,7 +339,7 @@ header {
 }
 
 .active-product {
-    color: var(--second-color);
+    color: var(--second-color-alt);
     font-weight: bold;
 }
 
@@ -415,7 +413,7 @@ footer {
 
 .footer__bottom p {
     color: var(--white-color);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 /* about.html */
@@ -465,7 +463,55 @@ footer {
     transition: .5s;
 }
 
-@media  screen and (min-width: 768px) {
+.map__container {
+    width: 100%;
+}
+
+.map {
+    width: 100%;
+}
+
+/*contact.html*/
+.contact__section {
+    width: 100%;
+    height: auto;
+}
+
+.contact__container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact {
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.contact__title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+@media  screen and (max-width: 310px) {
+    .home__food--body h2 {
+        font-size: 2.4rem;
+    }
+}
+
+
+@media  screen and (min-width: 770px) {
     .header__sesion {
         justify-content: flex-end;
     }
@@ -535,5 +581,10 @@ footer {
 
     .about__map {
         grid-column: 2;
+    }
+    /*contact.html*/
+    .contact__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
