@@ -81,27 +81,31 @@ header {
     align-items: center;
 }
 
+.nav__toggle--close {
+    font-size: 4.0rem;
+    color: var(--white-color);
+    cursor: pointer;
+    margin-left: 250px;
+}
+
 @media screen and (max-width:768px){
     .nav__menu {
         position: fixed;
         top: 0;
         left: -100%;
-        width: 75%;
+        width: 100%;
         height: 100vh;
-        padding-top: 1.5rem;
         background-color: var(--dark-color-light);
         transition: .5s;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
     }  
 
     .nav__menu img {
-        width: 250px;
-        margin-top: -150px;
-        margin-bottom: 50px;
+        width: 200px;
+        margin-bottom: 10px;
         visibility:visible;
     }
 }
@@ -110,11 +114,11 @@ header {
     margin-bottom: 25px;
     list-style: none;
 }
-  
+
 .nav__links {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     color: var(--white-color);
-    margin-right: 20px;
+    margin-right: 10px;
 }
   
 .nav__links:hover {
@@ -134,10 +138,6 @@ header {
 .menu__social .bx:hover {
     color: var(--second-color-alt);
     transition: .5s;
-}
-  
-.show-menu {
-    left: 0;
 }
 
 .scrolltop {
@@ -394,6 +394,7 @@ footer {
     margin-left: 20px;
     color: var(--white-color);
     font-size: 4.0rem;
+    margin-bottom: 50px;
 }
 
 .footer__row--body i:hover {
@@ -607,6 +608,10 @@ form {
     }
 
     .nav__toggle {
+        display: none;
+    }
+
+    .nav__toggle--close {
         display: none;
     }
 

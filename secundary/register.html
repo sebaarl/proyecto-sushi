@@ -26,6 +26,12 @@
                     $('.header__sesion').css( 'transition', '.7s')
                }
             })
+            $('#nav-toggle').click(function() {
+                $('#nav-menu').css('left', '0')
+            })
+            $('#nav-toggle-close').click(function(){
+                $('#nav-menu').css('left', '-100%')
+            })
         })
     </script>
 </head>
@@ -39,6 +45,9 @@
             <a href="../secundary/register.html">Registrate</a>
         </div>
         <nav class="header__nav">
+            <div class="nav__toggle--close" id="nav-toggle-close">
+                <i class='bx bx-x' id="close"></i>
+            </div>
             <div class="nav__logo">
                 <a href="../index.html"><img src="../img/icons/logo2-web-1024x373.png" alt=""></a>
             </div>
