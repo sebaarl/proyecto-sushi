@@ -97,16 +97,19 @@ header {
         height: 100vh;
         background-color: var(--dark-color-light);
         transition: .5s;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        text-align: center;
+        padding-top: 60px;
     }  
 
     .nav__menu img {
         width: 200px;
         margin-bottom: 10px;
         visibility:visible;
+    }
+
+    .nav__list {
+        margin-left: 15px;
     }
 }
 
