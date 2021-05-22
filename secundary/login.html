@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Rivera</title>
+    <title>Iniciar Sesión</title>
+    <link rel="icon" type="imge/png" href="../img/icons/cropped-Sin-título-1-32x32.png">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+            //Cambio de background al header al hacer scroll
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 150) {
                     $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
@@ -24,6 +26,27 @@
                     $('.header__sesion').css('background-color', '#101010')
                     $('.header__sesion').css( 'transition', '.7s')
                }
+            })
+            //Validación de Login
+            $('#error').hide()
+            $('#error-icon').hide()
+            $('#form').submit(function() {
+                let mensaje = ''
+                if ($('#email').val().trim().length == 0) {
+                    mensaje = 'Debe ingresar su correo electronico'
+                }
+                if ($('#pass').val().trim().length == 0) {
+                    mensaje = 'Debe ingresar su contraseña'
+                }
+                if ($('#email').val().trim().length == 0 && $('#pass').val().trim().length == 0) {
+                    mensaje = 'Debe ingresar sus credenciales'
+                }
+                if (mensaje != '') {
+                    $('#error-icon').show()
+                    $('#error').html(mensaje)
+                    $('#error').show()
+                    event.preventDefault()
+                }
             })
         })
     </script>
@@ -68,11 +91,27 @@
         <section>
             <div class="home__img">
                 <div class="home__food">
-                    <div class="home__food--body">
-                        <h2>¿Andas con bajón?</h2>
-                        <div class="home__body--content">
-                            <p></p>
-                        </div>
+                    <div class="login__container">
+                        <form action="./login.html" id="form">
+                            <h2>Inicio de sesión</h2>
+                            <div class="input__div one">
+                                <div>
+                                    <p><i class='bx bx-user'></i> Correo Electronico</p>
+                                </div>
+                                <input class="input" type="text" name="email" id="email">
+                            </div>
+                            <div class="input__div two">
+                                <div>
+                                    <p><i class='bx bx-lock-alt'></i> Contraseña</p>
+                                </div>
+                                <input class="input" type="password" name="password" id="pass">
+                            </div>
+                            <i class="bx bx-error" id="error-icon"></i>
+                            <div class="alert" id="error"></div>
+                            <a class="login__text" href="">Olvidaste tu contraseña?</a>
+                            <a class="login__text" href="../secundary/register.html">Resgistrate aquí!</a>
+                            <input type="submit" class="home__body--button btn" value="Iniciar Sesión">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -93,8 +132,8 @@
                     <h4>Información de Contacto</h4>
                 </div>
                 <div class="footer__row--body">
-                    <p class='bx bxs-map'> San Martin 622, Concepción, Chile</p><br>
-                    <p class='bx bxs-phone'> +56 9 1234 5678</p>
+                    <p><i class='bx bxs-map'></i> San Martin 622, Concepción, Chile</p><br>
+                    <p><i class='bx bx-phone' ></i> +56 9 1234 5678</p>
                 </div>
             </div>
             <div class="footer__row">
