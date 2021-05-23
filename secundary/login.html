@@ -14,7 +14,7 @@
     <script>
         $(document).ready(function() {
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 150) {
+                if ($(this).scrollTop() > 60) {
                     $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
                     $('header').css('transition', '.7s')
                     $('.header__sesion').css('background-color', '#d00008')
@@ -66,12 +66,12 @@
         </div>
         <nav class="header__nav">
             <div class="nav__logo">
-                <div class="nav__toggle--close" id="nav-toggle-close">
-                    <i class='bx bx-x' id="close"></i>
-                </div>
                 <a href="../index.html"><img src="../img/icons/logo2-web-1024x373.png" alt=""></a>
             </div>
             <div class="nav__menu" id="nav-menu">
+                <div class="nav__toggle--close" id="nav-toggle-close">
+                    <i class='bx bx-x' id="close"></i>
+                </div>
                 <img src="../img/icons/logo2-web-1024x373 v2.png" alt="">
                 <ul class="nav__list">
                     <li class="nav__items"><a href="../index.html" class="nav__links active-link">Inicio</a></li>
@@ -158,7 +158,6 @@
             <p>Programación Web || Duoc UC 2021</p>
         </section>
     </footer>
-    <script src="../mixitup.min.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>
