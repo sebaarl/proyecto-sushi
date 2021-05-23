@@ -80,20 +80,23 @@ $(document).ready(function() {
                 required: "Por favor ingresa un correo electronico",
                 email: "Por favor ingresa un correo válido ej: email@emial.com"
             }
-         },
+         }
     })
+})
 
+$(document).ready(function() {
+    $('.api__container').hide()
     $('.api__content').hide()
     $('#dolar').click(function() {
+        $('.api__container').show()
         $('.api__content').show()
         $.getJSON('https://mindicador.cl/api', function(data) {
             let item = data;
             $('.api__content').append(
-                '<h3 class=section__title api__title>Valor del dolar</h3>' +
-                ' <div class=api__body>' +
-                    '<p class=api__subtitle>El valor es:</p>' +
-                    '<p class=api__valor>' + '$' +item.dolar.valor + '</p>' + '<p>Con un dolar no te alcanzan unos sushitos</p>' +
-                    '</div>')
+                '<h3 class=section__title api__title>Valor del dolar</h3>' + ' <div class=api__body>' +
+                '<p class=api__subtitle>El valor es:</p>' +
+                '<p class=api__valor>' + '$' +item.dolar.valor + '</p>' + '<p>Con un dolar no te alcanzan unos sushitos</p>' +
+                '</div>')
         })
         $('#dolar').off()
     })
