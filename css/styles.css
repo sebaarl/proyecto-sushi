@@ -297,7 +297,6 @@ header {
 }
   
 .product__content {
-    width: 100%;
     height: 450px;
     max-width: 250px;
     color: var(--white-color);
@@ -509,19 +508,18 @@ footer {
 }
 
 /*login.html*/
+.login__section {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+
 .login__container {
     width: 100%;
     height: 500px;
     background-color: rgba(0, 0, 0, 0.445);
     color: white;
-    margin-top: 180px;
-}
-
-.login__container h2 {
-    font-size: 2.0rem;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    margin: 0 auto;
 }
 
 form {
@@ -564,7 +562,7 @@ form {
 .login__text {
     font-size: 1.4rem;
     color: var(--white-color);
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .login__text:hover {
@@ -592,7 +590,6 @@ form {
 .api__section {
     width: 100%;
     height: auto;
-    margin-top: 50px;
 }
 
 .api__container {
@@ -637,9 +634,9 @@ form {
     margin-bottom: 20px;
 }
 
-@media  screen and (max-width: 310px) {
+@media  screen and (max-width: 330px) {
     .home__food--body h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 }
 
