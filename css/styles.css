@@ -52,8 +52,7 @@ header {
 }
 
 .header__sesion a:hover {
-    color: var(--second-color);
-    transition: .5s;
+    text-decoration: underline;
 }
   
 .header__nav {
@@ -511,15 +510,20 @@ footer {
 .login__section {
     width: 100%;
     height: auto;
-    padding-top: 50px;
+    margin-top: 150px;
 }
 
 .login__container {
     width: 100%;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.445);
+    height: auto;
     color: white;
     margin: 0 auto;
+}
+
+.login__container h3 {
+    font-size: 2.0rem;
+    text-align: center;
+    margin-top: 10px;
 }
 
 form {
@@ -533,7 +537,6 @@ form {
 
 .input__div {
     width: 100%;
-    border-bottom: 2px solid var(--second-color-alt);
     margin-top: 20px;
 }
 
@@ -557,6 +560,7 @@ form {
     font-size: 1.8rem;
     padding-left: 20px;
     padding-right: 20px;
+    border-bottom: 2px solid var(--second-color-alt);
 }
 
 .login__text {
@@ -573,17 +577,12 @@ form {
     outline: none;
     border: none;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.alert {
-    font-size: 1.8rem;
-    color: var(--second-color);
-}
-
-#error-icon {
-    font-size: 1.8rem;
-    color: var(--second-color);
-    margin-top: 5px;
+.error {
+    color: var(--second-color-alt);
+    font-size: 1.2rem;
 }
 
 /*api.html*/
@@ -632,6 +631,35 @@ form {
 
 .api__content p:last-child {
     margin-bottom: 20px;
+}
+
+/*register.html*/
+.register__section {
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+}
+
+.register__container {
+    width: 100%;
+    height: auto;
+    color: white;
+    margin: 0 auto;
+}
+
+.register__container h3 {
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+.register__text {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin-top: 10px;
+}
+
+.register__text:hover {
+    text-decoration: underline;
 }
 
 @media  screen and (max-width: 330px) {
@@ -721,8 +749,8 @@ form {
         grid-template-columns: 1fr 1fr 1fr;
     }
     /*login.html*/
-    .login__container {
+    .login__container, .register__container {
         max-width: 500px;
-        border-radius: 20px;
     }
+
 }

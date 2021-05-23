@@ -11,49 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 60) {
-                    $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
-                    $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#d00008')
-                    $('.header__sesion').css( 'transition', '.7s')
-                } else {
-                    $('header').css('background-color', 'transparent')
-                    $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#101010')
-                    $('.header__sesion').css( 'transition', '.7s')
-               }
-            })
-            $('#error').hide()
-            $('#error-icon').hide()
-            $('#form').submit(function() {
-                let mensaje = ''
-                if ($('#email').val().trim().length == 0) {
-                    mensaje = 'Debe ingresar su correo electronico'
-                }
-                if ($('#pass').val().trim().length == 0) {
-                    mensaje = 'Debe ingresar su contraseña'
-                }
-                if ($('#email').val().trim().length == 0 && $('#pass').val().trim().length == 0) {
-                    mensaje = 'Debe ingresar sus credenciales'
-                }
-                if (mensaje != '') {
-                    $('#error-icon').show()
-                    $('#error').html(mensaje)
-                    $('#error').show()
-                    event.preventDefault()
-                }
-            })
-            $('#nav-toggle').click(function() {
-                $('#nav-menu').css('left', '0')
-            })
-            $('#nav-toggle-close').click(function(){
-                $('#nav-menu').css('left', '-100%')
-            })
-        })
-    </script>
 </head>
 <body>
     <a href="#" class="scrolltop" id="scroll-top">
@@ -96,18 +53,10 @@
             <span class="items-count">0</span>
             <i class='bx bx-cart'></i>
         </div>
-        <section>
-            <div class="home__img">
-                <div class="home__food">
-                    <div class="home__food--body">
-                        <h2>Inicio de sesión</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="login__section">
             <div class="login__container">
-                <form action="./login.html" id="form">
+                <h3>Inicia sesión aquí!</h3>
+                <form action="./login.html" id="form-login">
                     <div class="input__div one">
                         <div>
                             <p><i class='bx bx-user'></i> Correo Electronico</p>
@@ -120,8 +69,6 @@
                         </div>
                         <input class="input" type="password" name="password" id="pass">
                     </div>
-                    <i class="bx bx-error" id="error-icon"></i>
-                    <div class="alert" id="error"></div>
                     <a class="login__text" href="">Olvidaste tu contraseña?</a>
                     <a class="login__text" href="../secundary/register.html">Resgistrate aquí!</a>
                     <input type="submit" class="home__body--button btn" value="Iniciar Sesión">
@@ -163,6 +110,7 @@
             <p>Programación Web || Duoc UC 2021</p>
         </section>
     </footer>
-    <script src="../main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.validate.js"></script>
 </body>
 </html>

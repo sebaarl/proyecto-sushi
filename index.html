@@ -11,29 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 60) {
-                    $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
-                    $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#d00008')
-                    $('.header__sesion').css( 'transition', '.7s')
-                } else {
-                    $('header').css('background-color', 'transparent')
-                    $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#101010')
-                    $('.header__sesion').css( 'transition', '.7s')
-                }
-            })
-            $('#nav-toggle').click(function() {
-                $('#nav-menu').css('left', '0')
-            })
-            $('#nav-toggle-close').click(function(){
-                $('#nav-menu').css('left', '-100%')
-            })
-        })
-    </script>
 </head>
 <body>
     <a href="#" class="scrolltop" id="scroll-top">
@@ -182,7 +159,7 @@
             <p>Programación Web || Duoc UC 2021</p>
         </section>
     </footer>
-    <script src="./mixitup.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="./js/mixitup.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

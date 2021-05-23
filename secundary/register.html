@@ -11,29 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 60) {
-                    $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
-                    $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#d00008')
-                    $('.header__sesion').css( 'transition', '.7s')
-                } else {
-                    $('header').css('background-color', 'transparent')
-                    $('header').css('transition', '.7s')
-                    $('.header__sesion').css('background-color', '#101010')
-                    $('.header__sesion').css( 'transition', '.7s')
-               }
-            })
-            $('#nav-toggle').click(function() {
-                $('#nav-menu').css('left', '0')
-            })
-            $('#nav-toggle-close').click(function(){
-                $('#nav-menu').css('left', '-100%')
-            })
-        })
-    </script>
 </head>
 <body>
     <a href="#" class="scrolltop" id="scroll-top">
@@ -76,17 +53,37 @@
             <span class="items-count">0</span>
             <i class='bx bx-cart'></i>
         </div>
-        <section>
-            <div class="home__img">
-                <div class="home__food">
-                    <div class="home__food--body">
-                        <h2>¿Andas con bajón?</h2>
-                        <div class="home__body--content">
-                            <p></p>
+        <section class="register__section">
+            <div class="register__container">
+                <h3>Registrate aquí!</h3>
+                <form action="./register.html" id="form-register">
+                    <div class="input__div two">
+                        <div>
+                            <p><i class='bx bx-user'></i> Nombre y Apellido</p>
                         </div>
-                        <a class="home__body--button" href="./menu.html">Pide Aquí!</a>
+                        <input class="input" type="text" name="name" id="name" placeholder="ej: Juan Perez">
                     </div>
-                </div>
+                    <div class="input__div one">
+                        <div>
+                            <p><i class='bx bx-envelope'></i> Correo Electronico</p>
+                        </div>
+                        <input class="input" type="text" name="email" id="email" placeholder="ej: email@email.com">
+                    </div>
+                    <div class="input__div two">
+                        <div>
+                            <p><i class='bx bx-lock-alt'></i> Contraseña</p>
+                        </div>
+                        <input class="input" type="password" name="password" id="password" placeholder="crea tu contraseña">
+                    </div>
+                    <div class="input__div two">
+                        <div>
+                            <p><i class='bx bx-lock-alt'></i> Confirmar ontraseña</p>
+                        </div>
+                        <input class="input" type="password" name="confirm" id="pass-confirm" placeholder="confirma tu contraseña">
+                    </div>
+                    <a class="register__text" href="">Ya tienes una cuenta?</a>
+                    <input type="submit" class="home__body--button btn" value="Registrase">
+                </form>
             </div>
         </section>
     </main>
@@ -124,6 +121,7 @@
             <p>Programación Web || Duoc UC 2021</p>
         </section>
     </footer>
-    <script src="../main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.validate.js"></script>
 </body>
 </html>
