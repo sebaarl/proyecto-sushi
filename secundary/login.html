@@ -13,9 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            //Cambio de background al header al hacer scroll
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 150) {
+                if ($(this).scrollTop() > 60) {
                     $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
                     $('header').css('transition', '.7s')
                     $('.header__sesion').css('background-color', '#d00008')
@@ -27,7 +26,6 @@
                     $('.header__sesion').css( 'transition', '.7s')
                }
             })
-            //Validación de Login
             $('#error').hide()
             $('#error-icon').hide()
             $('#form').submit(function() {
@@ -48,6 +46,12 @@
                     event.preventDefault()
                 }
             })
+            $('#nav-toggle').click(function() {
+                $('#nav-menu').css('left', '0')
+            })
+            $('#nav-toggle-close').click(function(){
+                $('#nav-menu').css('left', '-100%')
+            })
         })
     </script>
 </head>
@@ -65,12 +69,16 @@
                 <a href="../index.html"><img src="../img/icons/logo2-web-1024x373.png" alt=""></a>
             </div>
             <div class="nav__menu" id="nav-menu">
+                <div class="nav__toggle--close" id="nav-toggle-close">
+                    <i class='bx bx-x' id="close"></i>
+                </div>
                 <img src="../img/icons/logo2-web-1024x373 v2.png" alt="">
                 <ul class="nav__list">
                     <li class="nav__items"><a href="../index.html" class="nav__links active-link">Inicio</a></li>
                     <li class="nav__items"><a href="../secundary/about.html" class="nav__links">Quiénes Somos</a></li>
                     <li class="nav__items"><a href="../secundary/menu.html" class="nav__links">Menú</a></li>
                     <li class="nav__items"><a href="../secundary/contact.html" class="nav__links">Contacto</a></li>
+                    <li class="nav__items"><a href="../secundary/api.html" class="nav__links">API REST</a></li>
                 </ul>
                 <div class="menu__social">
                     <i class='bx bxl-instagram'></i>
@@ -91,29 +99,33 @@
         <section>
             <div class="home__img">
                 <div class="home__food">
-                    <div class="login__container">
-                        <form action="./login.html" id="form">
-                            <h2>Inicio de sesión</h2>
-                            <div class="input__div one">
-                                <div>
-                                    <p><i class='bx bx-user'></i> Correo Electronico</p>
-                                </div>
-                                <input class="input" type="text" name="email" id="email">
-                            </div>
-                            <div class="input__div two">
-                                <div>
-                                    <p><i class='bx bx-lock-alt'></i> Contraseña</p>
-                                </div>
-                                <input class="input" type="password" name="password" id="pass">
-                            </div>
-                            <i class="bx bx-error" id="error-icon"></i>
-                            <div class="alert" id="error"></div>
-                            <a class="login__text" href="">Olvidaste tu contraseña?</a>
-                            <a class="login__text" href="../secundary/register.html">Resgistrate aquí!</a>
-                            <input type="submit" class="home__body--button btn" value="Iniciar Sesión">
-                        </form>
+                    <div class="home__food--body">
+                        <h2>Inicio de sesión</h2>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="login__section">
+            <div class="login__container">
+                <form action="./login.html" id="form">
+                    <div class="input__div one">
+                        <div>
+                            <p><i class='bx bx-user'></i> Correo Electronico</p>
+                        </div>
+                        <input class="input" type="text" name="email" id="email">
+                    </div>
+                    <div class="input__div two">
+                        <div>
+                            <p><i class='bx bx-lock-alt'></i> Contraseña</p>
+                        </div>
+                        <input class="input" type="password" name="password" id="pass">
+                    </div>
+                    <i class="bx bx-error" id="error-icon"></i>
+                    <div class="alert" id="error"></div>
+                    <a class="login__text" href="">Olvidaste tu contraseña?</a>
+                    <a class="login__text" href="../secundary/register.html">Resgistrate aquí!</a>
+                    <input type="submit" class="home__body--button btn" value="Iniciar Sesión">
+                </form>
             </div>
         </section>
     </main>
@@ -151,7 +163,6 @@
             <p>Programación Web || Duoc UC 2021</p>
         </section>
     </footer>
-    <script src="../mixitup.min.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>

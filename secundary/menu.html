@@ -14,7 +14,7 @@
     <script>
         $(document).ready(function() {
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 150) {
+                if ($(this).scrollTop() > 60) {
                     $('header').css('background-color', 'rgba(0, 0, 0, 0.9)')
                     $('header').css('transition', '.7s')
                     $('.header__sesion').css('background-color', '#d00008')
@@ -25,6 +25,12 @@
                     $('.header__sesion').css('background-color', '#101010')
                     $('.header__sesion').css( 'transition', '.7s')
                }
+            })
+            $('#nav-toggle').click(function() {
+                $('#nav-menu').css('left', '0')
+            })
+            $('#nav-toggle-close').click(function(){
+                $('#nav-menu').css('left', '-100%')
             })
         })
     </script>
@@ -43,12 +49,16 @@
                 <a href="../index.html"><img src="../img/icons/logo2-web-1024x373.png" alt=""></a>
             </div>
             <div class="nav__menu" id="nav-menu">
+                <div class="nav__toggle--close" id="nav-toggle-close">
+                    <i class='bx bx-x' id="close"></i>
+                </div>
                 <img src="../img/icons/logo2-web-1024x373 v2.png" alt="">
                 <ul class="nav__list">
                     <li class="nav__items"><a href="../index.html" class="nav__links active-link">Inicio</a></li>
                     <li class="nav__items"><a href="../secundary/about.html" class="nav__links">Quiénes Somos</a></li>
                     <li class="nav__items"><a href="../secundary/menu.html" class="nav__links">Menú</a></li>
                     <li class="nav__items"><a href="../secundary/contact.html" class="nav__links">Contacto</a></li>
+                    <li class="nav__items"><a href="../secundary/api.html" class="nav__links">API REST</a></li>
                 </ul>
                 <div class="menu__social">
                     <i class='bx bxl-instagram'></i>
@@ -80,11 +90,13 @@
             </div>
         </section>
         <section class="featured__product">
-            <h2>Productos destacados</h2>
+            <h2>Nuestro Menú</h2>
             <div class="product__nav">
-                <span class="product__item active-product" data-filter="all">Todos</span>
-                <span class="product__item" data-filter=".promo">Promo</span>
+                <span class="product__item active-product" data-filter="all">Todo</span>
+                <span class="product__item" data-filter=".promo">Promos</span>
                 <span class="product__item" data-filter=".gohan">Gohan</span>
+                <span class="product__item" data-filter=".roll">Rolls</span>
+                <span class="product__item" data-filter=".extra">Extras</span>
             </div>
             <div class="product__container">
                 <div class="product__content mix promo">
@@ -95,7 +107,55 @@
                         <a class="home__body--button product__button">Agregar al carro</a>
                     </div>
                 </div>
-                <div class="product__content mAgregar al carro">
+                <div class="product__content mix roll">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix roll">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix roll">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix roll">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix roll">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix roll">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix extra">
                     <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
                     <div class="product__data">
                         <h3 class="product__title">45 piezas</h3>
@@ -128,6 +188,30 @@
                     </div>
                 </div>
                 <div class="product__content mix gohan">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix gohan">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix extra">
+                    <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
+                    <div class="product__data">
+                        <h3 class="product__title">45 piezas</h3>
+                        <p class="product__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ut doloremque adipisci eligendi quis maxime laboriosam. Ab id dolorum vitae nisi nemo, nobis illum consequatur, ad sunt eos vel at?</p>
+                        <a class="home__body--button product__button">Agregar al carro</a>
+                    </div>
+                </div>
+                <div class="product__content mix extra">
                     <a href=""><img src="../img/sushi-piezas.png" alt="" class="product__img"></a>
                     <div class="product__data">
                         <h3 class="product__title">45 piezas</h3>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos</title>
+    <title>API REST</title>
     <link rel="icon" type="imge/png" href="../img/icons/cropped-Sin-título-1-32x32.png">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/styles.css">
@@ -31,6 +31,21 @@
             })
             $('#nav-toggle-close').click(function(){
                 $('#nav-menu').css('left', '-100%')
+            })
+
+            $('.api__content').hide()
+            $('#dolar').click(function() {
+                $('.api__content').show()
+                $.getJSON('https://mindicador.cl/api', function(data) {
+                let item = data;
+                $('.api__content').append(
+                    '<h3 class=section__title api__title>Valor del dolar</h3>' + 
+                    ' <div class=api__body>' + 
+                        '<p class=api__subtitle>El valor es:</p>' +
+                        '<p class=api__valor>' + '$' +item.dolar.valor + '</p>' + '<p>Con un dolar no te alcanzan unos sushitos</p>' + 
+                        '</div>'
+                )})
+                $('#dolar').off()
             })
         })
     </script>
@@ -80,34 +95,15 @@
             <div class="home__img">
                 <div class="home__food">
                     <div class="home__food--body">
-                        <h2>¿Quiénes Somos?</h2>
+                        <h2>API REST</h2>
+                        <a class="home__body--button" id="dolar" href="#dolar">Valor del dolar</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about__section">
-            <div class="about__us">
-                <div class="about__container">
-                    <div class="about__info">
-                        <h3 class="section__title">Sobre nosotros</h3>
-                        <p class="about__info--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ea consequatur reiciendis voluptatibus a quibusdam quis dolorum. A consectetur, magnam aperiam cupiditate enim voluptate voluptas illum sint pariatur laudantium asperiores! <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores rem eum repellendus debitis sequi omnis minima eligendi ea at et, temporibus eius esse velit maxime laborum architecto pariatur dolorem consequuntur!</p>
-                        <div class="about__info--social">
-                            <p class="about__social--title">Siguenos en nuestras redes</p>
-                            <i class='bx bxl-instagram'></i>
-                            <i class='bx bxl-facebook' ></i>
-                            <i class='bx bxl-twitter' ></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about__map">
-                <div class="about__container">
-                    <div class="about__info">
-                        <h3 class="section__title">¿Dónde estamos ubicados?</h3>
-                        <div class="map__container">
-                            <iframe  class="map" width="350" height="260" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=350&amp;height=260&amp;hl=en&amp;q=San%20Martin%20622,%20Concepci%C3%B3n,%20Chile%20Concepci%C3%B3n+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/es'>maps-generator</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=925533c29146627d959eb6cc4d8ac1d750d3765b'></script>
-                        </div>
-                    </div>
+        <section class="api__section">
+            <div class="api__container">
+                <div class="api__content">
                 </div>
             </div>
         </section>
