@@ -109,7 +109,7 @@ header {
     }
 
     .nav__list {
-        margin-left: 5px;
+        justify-content: center;
     }
 }
 
