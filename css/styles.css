@@ -121,7 +121,6 @@ header {
 .nav__links {
     font-size: 1.8rem;
     color: var(--white-color);
-    margin-right: 10px;
 }
   
 .nav__links:hover {
@@ -129,7 +128,7 @@ header {
     background-color: var(--second-color-alt);
     border-radius: 20px;
     color: var(--white-color);
-    transition: .6s;
+    transition: .5s;
 }
 
 .menu__social {
@@ -753,5 +752,4 @@ form {
     .login__container, .register__container {
         max-width: 500px;
     }
-
 }
