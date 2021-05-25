@@ -88,7 +88,7 @@ header {
     margin-right: 10px;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 900px){
     .nav__menu {
         position: fixed;
         top: 0;
@@ -109,7 +109,7 @@ header {
     }
 
     .nav__list {
-        margin-left: 15px;
+        margin-left: 5px;
     }
 }
 
@@ -661,7 +661,7 @@ form {
     }
 }
 
-@media  screen and (min-width: 769px) {
+@media  screen and (min-width: 900px) {
     .header__sesion {
         justify-content: flex-end;
     }
