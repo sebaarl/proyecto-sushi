@@ -84,6 +84,24 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function() {
+    $('.api__container').hide()
+    $('.api__content').hide()
+    $('#dolar').click(function() {
+        $('.api__container').show()
+        $('.api__content').show()
+        $.getJSON('https://mindicador.cl/api', function(data) {
+            let item = data;
+            $('.api__content').append(
+                '<h3 class=section_title apititle>Valor del dolar</h3>' + ' <div class=api_body>' +
+                '<p class=api__subtitle>El valor es:</p>' +
+                '<p class=api__valor>' + '$' +item.dolar.valor + '</p>' + '<p>Con un dolar no te alcanzan unos sushitos</p>' +
+                '</div>')
+        })
+        $('#dolar').off()
+    })
+})
+
 //Mostrar scroll top
 function scrollTop() {
   const scrollTop = document.getElementById('scroll-top')
@@ -118,3 +136,4 @@ function activeProduct() {
 }
 
 linkProduct.forEach(l => l.addEventListener('click', activeProduct))
+
